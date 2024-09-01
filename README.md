@@ -61,5 +61,5 @@ This app uses React Navigation for navigation between screens. To set up navigat
 
 ## API Integration
 
-- The app integrates with a backend API (mock or real) to fetch job listings and search results.
+- The app integrates with a backend(Rapid API) to fetch job listings and search results.
 - The API should support endpoints for fetching popular jobs, nearby jobs, and job search.
