@@ -97,7 +97,7 @@ const JobDetails = ({ route }) => {
             </View>
           )}
         </ScrollView>
-        {isLoading ? (
+        {!isLoading ? (
           <JobFooter url={data[0]?.job_google_link ?? "http://google.com"} />
         ) : (
           <View />

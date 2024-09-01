@@ -93,7 +93,13 @@ const JobSearch = ({ route, navigation }) => {
               {searchLoader ? (
                 <ActivityIndicator size="large" color={COLORS.primary} />
               ) : searchResult.length == 0 ? (
-                <Text style={{ paddingVertical: 50, alignSelf: "center", fontSize:20 }}>
+                <Text
+                  style={{
+                    paddingVertical: 50,
+                    alignSelf: "center",
+                    fontSize: 20,
+                  }}
+                >
                   No Data Available
                 </Text>
               ) : (
@@ -102,33 +108,37 @@ const JobSearch = ({ route, navigation }) => {
             </View>
           </>
         )}
-        ListFooterComponent={() => (
-          <View style={styles.footerContainer}>
-            <TouchableOpacity
-              style={styles.paginationButton}
-              onPress={() => handlePagination("left")}
-            >
-              <Image
-                source={icons.chevronLeft}
-                style={styles.paginationImage}
-                resizeMode="contain"
-              />
-            </TouchableOpacity>
-            <View style={styles.paginationTextBox}>
-              <Text style={styles.paginationText}>{page}</Text>
+        ListFooterComponent={() =>
+          !searchLoader ? (
+            <View style={styles.footerContainer}>
+              <TouchableOpacity
+                style={styles.paginationButton}
+                onPress={() => handlePagination("left")}
+              >
+                <Image
+                  source={icons.chevronLeft}
+                  style={styles.paginationImage}
+                  resizeMode="contain"
+                />
+              </TouchableOpacity>
+              <View style={styles.paginationTextBox}>
+                <Text style={styles.paginationText}>{page}</Text>
+              </View>
+              <TouchableOpacity
+                style={styles.paginationButton}
+                onPress={() => handlePagination("right")}
+              >
+                <Image
+                  source={icons.chevronRight}
+                  style={styles.paginationImage}
+                  resizeMode="contain"
+                />
+              </TouchableOpacity>
             </View>
-            <TouchableOpacity
-              style={styles.paginationButton}
-              onPress={() => handlePagination("right")}
-            >
-              <Image
-                source={icons.chevronRight}
-                style={styles.paginationImage}
-                resizeMode="contain"
-              />
-            </TouchableOpacity>
-          </View>
-        )}
+          ) : (
+            <View />
+          )
+        }
       />
     </SafeAreaView>
   );
