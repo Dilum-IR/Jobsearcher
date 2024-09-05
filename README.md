@@ -14,8 +14,6 @@ A mobile application built with React Native & Rapid API that allows users to se
 <img src="./assets/samples/IMG_7143.PNG" alt="Home Screen" width="300" />
 <img src="./assets/samples/IMG_7144.PNG" alt="Home Screen" width="300" />
 <img src="./assets/samples/IMG_7146.PNG" alt="Home Screen" width="300" />
-</div>
-<div style="display: flex; justify-content: space-between;">
 <img src="./assets/samples/IMG_7145.PNG" alt="Home Screen" width="300" />
 <img src="./assets/samples/IMG_7147.PNG" alt="Home Screen" width="300" />
 </div>
